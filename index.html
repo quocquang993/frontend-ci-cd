@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CI CD Demo</title>
+  <title>Frontend</title>
 </head>
 <body>
-  <h1>Chieu thu 5</h1>
+  <h1>Chieu thu 2</h1>
+
+  <button onclick="go()">Gọi Backend</button>
+
+  <script>
+    function go() {
+      fetch("https://backend-ci-cd.onrender.com")
+        .then(res => res.text())
+        .then(data => {
+          document.body.innerHTML += data;
+        });
+    }
+  </script>
 </body>
 </html>
