@@ -12,9 +12,10 @@
     function go() {
       fetch("https://backend-ci-cd-clk9.onrender.com")
         .then(res => res.text())
-        .then(data => {
-          document.body.innerHTML += data;
-        });
+       .then(data => {
+    const thongBao = `${data.message} - Tác giả: ${data.author}`;
+    document.getElementById("id-cua-ban").innerText = thongBao;
+});
     }
   </script>
 </body>
