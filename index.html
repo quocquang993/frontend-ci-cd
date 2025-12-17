@@ -16,7 +16,7 @@
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const thongBao = `${data.message} - Tác giả: ${data.author}`;
+                    const thongBao = `${data.message} - Tên: ${data.author}`;
                     document.getElementById("id-cua-ban").innerText = thongBao;
                 })
                 .catch(err => {
